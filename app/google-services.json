@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "63943961794",
+    "firebase_url": "https://river-oxygen-199715.firebaseio.com",
+    "project_id": "river-oxygen-199715",
+    "storage_bucket": "river-oxygen-199715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63943961794:android:c17b12714b698ba5",
+        "android_client_info": {
+          "package_name": "fiubatdp2g1_hoycomo.hoycomo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63943961794-rmesg98rndicbhe3j1jb8pnn7nalbdoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmWsMY5Ju_Lea3XOS95jZ26YmrxXdL3FQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

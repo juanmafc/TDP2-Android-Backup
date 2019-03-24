@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/order_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/mi_pedido_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="4dp"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:text="Mi Pedido"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/order_state_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="ESTADO"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/order_price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/separator_first"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/colorHoyComoGrey"
+        android:padding="8dp"
+        android:text="Precio" />
+
+
+    <View
+        android:id="@+id/separator_first"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/mi_pedido_textview"
+        android:background="@color/colorHoyComoGrey"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/order_for_restaurant_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+
+        android:layout_below="@+id/separator_first"
+        android:paddingBottom="8dp"
+        android:paddingStart="8dp"
+        android:text="Nombre del restaurante"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/order_for_restaurant_name_textview"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="74dp">
+
+        <LinearLayout
+            android:id="@+id/ordered_dishes_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/order_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

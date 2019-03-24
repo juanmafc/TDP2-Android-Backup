@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConfirmOrderActivity">
+
+
+    <TextView
+        android:id="@+id/confirm_order_tittle_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos del Pedido"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <View
+        android:id="@+id/separator_first"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/confirm_order_tittle_textview"
+        android:background="@color/colorHoyComoGrey"
+        android:paddingBottom="4dp" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/general_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@+id/confirm_order_tittle_textview"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/general_information_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/confirm_order_tittle_textview">
+
+            <TextView
+                android:id="@+id/confirm_commerce_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Nombre del restaurante"
+                android:textSize="@dimen/confirm_order_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/confirm_price_textview_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confirm_commerce_name_textview"
+                android:layout_centerHorizontal="true"
+                android:text="Total"
+                android:textSize="@dimen/confirm_order_text_size" />
+
+            <TextView
+                android:id="@+id/confirm_price_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confirm_price_textview_label"
+                android:layout_centerHorizontal="true"
+                android:text="Precio"
+                android:textSize="@dimen/confirm_order_text_size" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/location_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@+id/general_information"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/location_information_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/confirm_order_tittle_textview">
+
+            <TextView
+                android:id="@+id/delivery_address_tittle_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Dirección"
+                android:textSize="@dimen/confirm_order_text_size"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/change_delivery_address_imagebutton"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_button"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_location_on_white"
+                android:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/delivery_address_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/change_delivery_address_imagebutton"
+                android:layout_alignParentEnd="true"
+                android:text="Configurar"
+                android:textSize="8sp"/>
+
+            <TextView
+                android:id="@+id/confirm_my_address_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi dirección:"
+                android:layout_margin="2dp"
+                android:layout_below="@id/delivery_address_tittle_textview"
+                android:textSize="@dimen/confirm_order_text_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/delivery_address_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:maxLines="1"
+                android:hint="Dirección no ingresada"
+                android:layout_below="@+id/confirm_my_address_textview"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/confirm_order_text_size" />
+
+            <TextView
+                android:id="@+id/comfirm_my_address_details_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detalles:"
+                android:layout_below="@id/delivery_address_textview"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/confirm_order_text_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/delivery_address_details_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No agregaste detalles"
+                android:layout_margin="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_below="@id/comfirm_my_address_details_textview"
+                android:textSize="@dimen/confirm_order_text_size" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/payment_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@+id/location_information"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/payment_information_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/confirm_order_tittle_textview">
+
+            <TextView
+                android:id="@+id/select_payment_method_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Forma de pago "
+                android:textSize="@dimen/confirm_order_text_size"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/payment_methods_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_below="@+id/select_payment_method_textview"
+                android:textSize="@dimen/confirm_order_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/credit_card_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payment_methods_spinner">
+
+                <TextView
+                    android:id="@+id/credit_card_owner_name_eddittext_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Nombre:"
+                    android:textSize="@dimen/confirm_order_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/credit_card_owner_name_eddittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/credit_card_owner_name_eddittext_label"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="Nombre, como aparece en al tarjeta"/>
+
+                <TextView
+                    android:id="@+id/credit_card_number_eddittext_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/credit_card_owner_name_eddittext"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Número:"
+                    android:textSize="@dimen/confirm_order_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/credit_card_imageview"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/credit_card_number_eddittext_label"
+                    android:src="@drawable/credit_card_unknow" />
+
+                <EditText
+                    android:id="@+id/credit_card_number_eddittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_below="@id/credit_card_number_eddittext_label"
+                    android:layout_toStartOf="@+id/credit_card_imageview"
+                    android:layout_alignParentStart="true"
+                    android:digits="0123456789 "
+                    android:hint="Número de la tarjeta"
+                    android:inputType="number"/>
+
+                <RelativeLayout
+                    android:id="@+id/credit_card_relativelayout_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_below="@+id/credit_card_number_eddittext">
+
+                    <TextView
+                        android:id="@+id/expiration_day_eddittext_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Vencimiento:"
+                        android:textSize="@dimen/confirm_order_text_size"
+                        android:textStyle="bold" />
+
+                    <br.com.sapereaude.maskedEditText.MaskedEditText
+                        android:id="@+id/expiration_day_eddittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_toEndOf="@+id/expiration_day_eddittext_label"
+                        android:hint="MMAA"
+                        android:inputType="number"
+                        app:mask="##/##" />
+
+                    <TextView
+                        android:id="@+id/validation_code_eddittext_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="43dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/expiration_day_eddittext"
+                        android:text="Código de \nseguridad:"
+                        android:textSize="@dimen/confirm_order_text_size"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/validation_code_eddittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_toEndOf="@+id/validation_code_eddittext_label"
+                        android:hint="_ _ _"
+                        android:inputType="number"
+                        android:maxLength="3" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/confirm_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:text="Confirmar pedido"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button" />
+
+</RelativeLayout>

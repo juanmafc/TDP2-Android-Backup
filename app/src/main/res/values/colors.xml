@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
+    <color name="colorAccent">#303f9f</color>
+    <color name="colorHoyComoGrey">#EBEBEB</color>
+    <color name="colorStar">#f7dc07</color>
+    <color name="colorGreen">#20d046</color>
+    <color name="colorRed">#d02020</color>
+    <!-- floating actions buttons -->
+    <color name="black">#000000</color>
+    <color name="half_black">#808080</color>
+</resources>

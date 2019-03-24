@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RatingsSearchActivity">
+
+    <TextView
+        android:id="@+id/filer_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Mayores o iguales a:"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/filer_name_label">
+
+        <LinearLayout
+            android:id="@+id/ratings_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating_5_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="4dp">
+                <RatingBar
+                    android:id="@+id/rating5"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating_4_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="4dp">
+                <RatingBar
+                    android:id="@+id/rating4"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating_3_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="4dp">
+                <RatingBar
+                    android:id="@+id/rating3"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating_2_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="4dp">
+                <RatingBar
+                    android:id="@+id/rating2"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating_1_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="4dp">
+                <RatingBar
+                    android:id="@+id/rating1"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="1"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

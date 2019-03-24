@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+
+        <ImageView
+            android:id="@+id/order_commerce_imageview"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:maxHeight="35dp"
+            android:maxWidth="74dp"
+            android:src="@drawable/store" />
+
+        <TextView
+            android:id="@+id/order_commerce_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/order_commerce_imageview"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="Nombre del comercio."
+            android:textSize="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+        <TextView
+            android:id="@+id/order_state_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/order_commerce_name_textview"
+            android:layout_alignLeft="@+id/order_commerce_name_textview"
+
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="ESTADO"
+
+            android:textSize="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+
+        <TextView
+            android:id="@+id/order_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="300dp"
+
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="$666"
+
+            android:textSize="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/order_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="17/05/2018 22:20"
+
+            android:textSize="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+
+        <LinearLayout
+            android:id="@+id/ordered_dishes_linearlayout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_state_textview"
+            android:layout_alignLeft="@+id/order_state_textview">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <Button
+        android:id="@+id/confirm_delivery_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="5dp"
+
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:text="Confirmar"
+        android:textSize="12dp"
+
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:onClick="confirmDelivery"/>
+
+
+
+    <Button
+        android:id="@+id/reject_delivery_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/colorHoyComoGrey"
+
+        android:paddingLeft="53dp"
+        android:paddingRight="53dp"
+        android:text="Rechazar"
+        android:textSize="12dp"
+        android:onClick="rejectDelivery"/>
+
+
+</RelativeLayout>

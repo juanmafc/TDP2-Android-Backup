@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La dirección de envío se encuentra fuera de la zona de entrega.
+¿Desea continuar? "
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/cancel_out_of_range_commerce_button"
+                style="@style/button_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorHoyComoGrey"
+                android:gravity="center"
+                android:text="Volver"
+                android:textColor="@android:color/black"
+                android:textStyle="normal"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/confirm_out_of_range_commerce_button"
+                style="@style/button_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Continuar"
+                android:layout_marginLeft="2dp"/>
+
+        </LinearLayout>LinearLayout
+    </LinearLayout>
+
+</RelativeLayout>

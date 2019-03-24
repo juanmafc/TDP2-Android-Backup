@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/configuration_tittle_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configuracion"
+        android:layout_centerHorizontal="true"
+
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/my_address_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi dirección:"
+        android:layout_below="@id/configuration_tittle_textview"
+
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textSize="@dimen/configuration_text_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/my_address_edittext"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_address_textview"
+
+        android:layout_toLeftOf="@+id/search_address_imagebutton"
+        android:layout_alignParentLeft="true"
+
+        android:hint="Mi Dirección"
+        android:inputType="text"
+        android:maxLines="1"
+        android:minLines="1"
+        android:paddingTop="0dp"
+        android:text=""
+
+        android:textSize="@dimen/configuration_text_size" />
+
+    <ImageButton
+        android:id="@+id/search_address_imagebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_search"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignTop="@+id/my_address_edittext"
+        />
+
+    <TextView
+        android:id="@+id/my_address_details_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles:"
+        android:layout_below="@id/my_address_edittext"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textSize="@dimen/configuration_text_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/configuration_details_eddittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_address_details_textview"
+        android:hint="Piso, altura, etc."
+        android:inputType="text"
+        android:minLines="3"
+        android:maxLines="3"
+        android:paddingTop="0dp"
+        android:textSize="@dimen/configuration_text_size" />
+
+
+    <TextView
+        android:id="@+id/my_address_position_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi posición:"
+        android:layout_below="@id/configuration_details_eddittext"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textSize="@dimen/configuration_text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/use_my_current_position_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marcar mi posicón actual"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/my_address_position_textview"
+        android:layout_marginRight="2dp"
+
+        android:background="@drawable/rounded_button"
+
+        android:textSize="12dp"
+        android:textColor="@android:color/white"
+
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/configuration_map_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/my_address_position_textview"
+        android:layout_above="@+id/accept_configuration_button"
+        android:layout_marginBottom="6dp">
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/accept_configuration_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:text="Aceptar"
+        android:textSize="12dp"
+
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button" />
+
+</RelativeLayout>

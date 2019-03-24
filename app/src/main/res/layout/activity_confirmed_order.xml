@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConfirmedOrderActivity">
+
+    <TextView
+        android:id="@+id/confimation_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Su pedido"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/confimation_textview_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ha sido enviado"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/confimation_textview"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/sended_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <Button
+        android:id="@+id/confirm_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="12sp"
+        android:onClick="goToNAvigationMenu"
+        android:text="Aceptar"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button" />
+
+</RelativeLayout>

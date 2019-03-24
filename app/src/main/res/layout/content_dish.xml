@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/content_dish_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/content_dish_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="vertical"
+                android:gravity="center"
+                android:text="Nombre del plato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/content_dish_price_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="$100"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_dish_description_text" />
+
+            <TextView
+                android:id="@+id/content_dish_price_number_no_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="12dp"
+                android:text="$100"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/content_dish_price_number"
+                app:layout_constraintTop_toBottomOf="@+id/content_dish_description_text" />
+
+
+            <TextView
+                android:id="@+id/content_dish_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:scrollbars="vertical"
+                android:text="Lorem ipsum dolor sit amet, ne unum putent vis, ea sed error eirmod phaedrum."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_dish_name" />
+
+            <View
+                android:id="@+id/separator_first"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorHoyComoGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_dish_price_number" />
+
+            <View
+                android:id="@+id/separator_second"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/colorHoyComoGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selected_garnishes_scrollview" />
+
+            <View
+                android:id="@+id/separator_third"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/colorHoyComoGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selected_options_scrollview" />
+
+            <Button
+                android:id="@+id/add_garnishes_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/circle_button"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/add_garnishes_textview"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator_first" />
+
+            <TextView
+                android:id="@+id/add_garnishes_textview"
+                android:layout_width="212dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="36dp"
+                android:text="Agregar Guarnición"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator_first" />
+
+
+
+
+            <ScrollView
+                android:id="@+id/selected_garnishes_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:fillViewport="true"
+                android:scrollbarThumbVertical="@color/colorPrimaryDark"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_garnishes_textview"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/selected_garnishes_linearlayout"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/add_more_garnishes_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_button"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selected_garnishes_scrollview" />
+
+            <Button
+                android:id="@+id/content_dish_option_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/circle_button"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/content_dish_option_text"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator_second" />
+
+            <TextView
+                android:id="@+id/content_dish_option_text"
+                android:layout_width="212dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="36dp"
+                android:text="Agregar Extras"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator_second" />
+
+
+
+
+
+            <ScrollView
+                android:id="@+id/selected_options_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:fillViewport="true"
+                android:scrollbarThumbVertical="@color/colorPrimaryDark"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_dish_option_text"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/selected_options_linearlayout"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/add_more_options_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_button"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selected_options_scrollview"
+                android:visibility="gone" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!-- this expands to fill the empty space if needed -->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/content_dish_quantity_less"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/content_dish_quantity_number"
+                android:text="-" />
+
+            <EditText
+                android:id="@+id/content_dish_quantity_number"
+                android:layout_width="45dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1">
+
+            </EditText>
+
+
+            <Button
+                android:id="@+id/content_dish_quantity_more"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/content_dish_quantity_number"
+                android:text="+"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/add_dish_to_order_button"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+
+            android:onClick="addDishToOrderActivity"
+            android:text="Agregar a Mi Pedido" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

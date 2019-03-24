@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/commerce_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:scaleType="centerCrop"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/store"/>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/commerce_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/commerce_imageview" />
+
+        <include layout="@layout/commerce_view_order_and_pager_icons"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/commerce_content_list_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/commerce_viewpager">
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

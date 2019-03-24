@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/commerce_name_textview"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Nombre del restaurante"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/commerce_categories_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="Categoría 1 - Categoría 2 - Categoría 3"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commerce_name_textview" />
+
+
+    <RelativeLayout
+        android:id="@+id/comment_commerce_info"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commerce_categories_textview">
+
+        <TextView
+            android:id="@+id/stars_button_information"
+            android:layout_width="67dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/colorHoyComoGrey"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="3.9"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/stars_button_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="@color/colorStar"
+            android:text="★"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/stars_button_information" />
+
+    </RelativeLayout>
+
+
+<!--
+    <TextView
+        android:id="@+id/my_comment_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="132dp"
+        android:text="Mi comentario y estrellas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+   <TextView
+        android:id="@+id/rating_textview"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/rating_imageview"
+        android:layout_alignLeft="@+id/rating_imageview"
+        android:layout_alignRight="@+id/rating_imageview"
+        android:layout_alignTop="@+id/rating_imageview"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:text="3.0"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="132dp" />
+-->
+
+<!--
+   <Button
+       android:id="@+id/share_opinion_information"
+       android:layout_width="150dp"
+       android:layout_height="32dp"
+       android:layout_marginStart="16dp"
+       android:background="@drawable/rounded_button"
+       android:backgroundTint="@color/colorHoyComoGrey"
+       android:text="¡Compartí tu opinión!"
+       android:textSize="10dp"
+       app:layout_constraintStart_toStartOf="parent"
+       tools:layout_editor_absoluteY="163dp" />
+
+   <Button
+       android:id="@+id/view_comments_button"
+       android:layout_width="150dp"
+       android:layout_height="32dp"
+       android:layout_marginEnd="16dp"
+       android:background="@drawable/rounded_button"
+       android:backgroundTint="@color/colorHoyComoGrey"
+       android:onClick="showCommentsActivity"
+       android:text="Ver opiniones"
+       android:textSize="10dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:layout_editor_absoluteY="163dp" />
+-->
+
+</android.support.constraint.ConstraintLayout>

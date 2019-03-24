@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/ordered_dish_image_view"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/store" />
+
+    <TextView
+        android:id="@+id/ordered_dish_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="14dp"
+        android:layout_toRightOf="@+id/ordered_dish_image_view"
+        android:text="Recoleta"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ordered_dish_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="$666"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ordered_dish_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@+id/ordered_dish_price"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="@+id/ordered_dish_price"
+        android:layout_below="@+id/ordered_dish_name_textview"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/ordered_dish_image_view"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:id="@+id/ordered_dish_options_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ordered_dish_name_textview"
+            android:layout_below="@id/ordered_dish_name_textview"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+    </ScrollView>
+
+</RelativeLayout>

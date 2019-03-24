@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/dish_activity_cordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="true"
+        tools:context=".activity.DishActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/dish_activity_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/dish_activity_collapsing_toolbar_dish_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:toolbarId="@+id/dish_activity_toolbar_dish_info">
+
+                <ImageView
+                    android:id="@+id/dish_activity_dish_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/dish_image_default_text"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ImageView
+        android:id="@+id/dish_activity_dish_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="146dp"
+        app:srcCompat="@drawable/promotion"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/dish_activity_dish_discount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="156dp"
+        android:text="10%"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/cardview_light_background"
+        android:visibility="invisible"
+        />
+
+    <include
+        layout="@layout/content_dish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dish_activity_cordinator_layout" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/star_dialog_commerce_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:scrollbars="vertical"
+        android:gravity="center"
+        android:text="Deje su opinion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/rating_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puntaje:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyle"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="1"
+        android:theme="@style/RatingBar" />
+
+    <TextView
+        android:id="@+id/rating_comment_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comentario:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/rating_comment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="200"
+        android:hint="Deje aquí su comentario...">
+
+        <requestFocus/>
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/cancel_options"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/dish_options_recycler_view"
+            android:layout_weight="1"
+            android:background="@color/colorHoyComoGrey"
+            android:gravity="center"
+            android:text="Cancelar"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"
+            android:layout_marginRight="2dp"/>
+
+        <Button
+            android:id="@+id/accept_options"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/dish_options_recycler_view"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Comentar"
+            android:layout_marginLeft="2dp"/>
+
+    </LinearLayout>LinearLayout
+</LinearLayout>
+
+</RelativeLayout>

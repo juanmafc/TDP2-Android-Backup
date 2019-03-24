@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@+id/commerce_imageview"
+    android:layout_alignTop="@+id/commerce_imageview"
+    android:layout_marginTop="182dp">
+
+
+    <ImageView
+        android:id="@+id/imageView_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="bg"
+        android:paddingTop="2dp"
+        android:paddingStart="8dp"
+        app:srcCompat="@drawable/ver_pedido_icon" />
+
+    <ImageView
+        android:id="@+id/imageView_order_inactive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="bg"
+        android:paddingTop="2dp"
+        android:paddingStart="8dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ver_pedido_icon_inactive" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="bg"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        app:srcCompat="@drawable/icons_pager_back" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="100dp"
+        android:contentDescription="map"
+        app:srcCompat="@drawable/icons_pager_back_map" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_map_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="102dp"
+        android:contentDescription="map"
+        android:paddingTop="2dp"
+        app:srcCompat="@drawable/icons_pager_back_map_unselected" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="60dp"
+        android:contentDescription="info"
+        app:srcCompat="@drawable/icons_pager_back_info" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_info_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="62dp"
+        android:contentDescription="info"
+        android:paddingTop="2dp"
+        app:srcCompat="@drawable/icons_pager_back_info_unselected" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="star"
+        app:srcCompat="@drawable/icons_pager_back_star" />
+
+    <ImageView
+        android:id="@+id/imageView_pager_star_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="22dp"
+        android:contentDescription="star"
+        android:paddingTop="2dp"
+        app:srcCompat="@drawable/icons_pager_back_star_unselected" />
+
+</RelativeLayout>
+

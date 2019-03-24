@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fiubatdp2g1_hoycomo.hoycomo.fragment.CommerceSearchFragment"
+    tools:showIn="@layout/activity_commerce_search">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/commerce_search_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_alignParentTop="true"
+        tools:layout_editor_absoluteX="0dp"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
+    <!--android:layout_below="@+id/content_commerce_search_categories"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/content_commerce_search_categories"-->
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/commerce_search_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commerce_search_tab_layout"
+        app:layout_constraintTop_toBottomOf="@+id/commerce_search_tab_layout" />
+
+    <!--<ListView-->
+        <!--android:id="@+id/content_commerce_search_commerces_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/content_commerce_search_categories">-->
+    <!--</ListView>-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/commerce_search_fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|right|end"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/filter"-->
+        <!--app:backgroundTint="@color/colorPrimary"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/commerce_search_fab_distance"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|left|end"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/filter"-->
+        <!--app:backgroundTint="@color/colorAccent"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true" />-->
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/commerce_search_fab_ratings"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:layout_margin="16dp"-->
+
+        <!--android:src="@drawable/filter"-->
+        <!--app:backgroundTint="@color/colorStar"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+
+    <include layout="@layout/floating_menu" />
+
+</RelativeLayout>

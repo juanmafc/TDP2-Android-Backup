@@ -1,0 +1,32 @@
+Template
+
+<metadata>
+Horas trabajadas: <hours>NUMERO</hours>
+Horas USERNAME: <hoursUSERNAME>NUMERO</hoursUSERNAME>
+Prioridad: <priority>NUMERO</priority>
+Prototipo: <prototype>LINK</prototype>
+Casos de Uso: <usecases>NUMERO CASOS DE USO busca el texto podemos poner los ids 1,2,5,6</usecases>
+</metadata>
+
+
+
+
+Copy an paste template
+
+
+<metadata>
+Horas trabajadas: <hours></hours>
+Horas Doskapi: <hoursDoskapi></hoursDoskapi>
+Horas juanmafc: <hoursjuanmafc></hoursjuanmafc>
+Prioridad: <priority></priority>
+Prototipo: <prototype></prototype>
+Casos de Uso: <usecases></usecases>
+</metadata>
+
+
+<metadata>
+Horas trabajadas: <hours></hours>
+</metadata>
+
+~                 
+
